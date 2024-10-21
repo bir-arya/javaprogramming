@@ -13,16 +13,20 @@ public class Factorial {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter any number");
 		fact=sc.nextInt();
+		sc.close();
+						
+		findFactorial(fact);
 		
-		for(int i=fact; i>1; i--)
+	}
+	
+	public static void findFactorial(int number)
+	{
+		for(int i=number; i>1; i--)
 		{
-			fact = fact*(i-1);
-			//System.out.println(" " +fact);
+			number = number*(i-1);
 		}
 		
-		System.out.println("Factorial of inserted number is " +fact);
-		sc.close();
-		
+		System.out.println("Factorial of inserted number is " +number);
 	}
 
 }
