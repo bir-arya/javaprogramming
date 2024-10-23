@@ -9,20 +9,41 @@ public class CheckPrimeNumber {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter any number");
 		int num = sc.nextInt();
+		sc.close();
+		
+		isPrimeNumber(num);		
+	}
+	
+	public static void isPrimeNumber(int number)
+	{
 		boolean flag = false;
-		for (int i = 2; i <= num / 2; ++i) {
-			// condition for nonprime number
-			if (num % i == 0) {
-				flag = true;
+		
+		if(number==0)
+		{
+			System.out.println("given number is not a prime number");
+		}
+		if(number==1)
+		{
+			System.out.println("given number is not a prime number");
+		}
+
+		for(int i=2; i<=number/2; ++i)
+		{
+			if(number%i==0)
+			{
+				flag=true;
 				break;
 			}
 		}
 
-		if (!flag)
-			System.out.println(num + " is a prime number.");
+		if(!flag)
+		{
+			System.out.println("given number is a prime number");
+		}
 		else
-			System.out.println(num + " is not a prime number.");
-
-		sc.close();
+		{
+			System.out.println("Given number is not a prime number");
+		}
 	}
+
 }
